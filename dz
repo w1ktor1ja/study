@@ -1,0 +1,27 @@
+#1
+class TravelBlog:
+   total_blogs = 0
+
+   def __init__(self, name, days):
+        self.name = name
+        self.days = days
+        TravelBlog.total_blogs += 1
+
+   def print_info(self):
+       print(f'Текущее значение: {self.total_blogs}\n')
+
+travelblog1 = TravelBlog ('Швейцария', '7')
+travelblog1.print_info()
+
+travelblog2 = TravelBlog ('Новая Зеландия', '8')
+travelblog2.print_info()
+
+
+#2
+class Person:
+    name = 'Юрий тверской'
+    job = 'Писатель'
+    city = 'Иваново'
+
+result = hasattr(Person, 'job')
+print(result)
