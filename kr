@@ -1,0 +1,58 @@
+#1
+class Parallelepiped:
+    def __init__(self, width, length, height):
+        self.width = width
+        self.length = length
+        self.height = height
+
+    def square (self):
+        return self.width * self.length
+
+    def capacity (self):
+        return self.width * self.length * self.height
+
+    def square_part (self):
+        return self.width * self.height
+
+    def info(self):
+        print(f'Class name: {Parallelepiped.__name__}')
+        print(f'Площадь основания: square')
+        print(f'Объём: capacity')
+        print(f'Площадь боковой стороны: square_part')
+p = Parallelepiped (10, 5, 3)
+print(p.square(), p.capacity(), p.square_part())
+
+#2
+class ListWorker:
+    def __init__(self, arguments):
+
+
+  '''  def list_worker(*args):
+        list = [0]
+        count = 0
+        for i in args:
+            count += i
+            list.append(count)
+        return list''' #не поняла, как дальше реализовать
+
+    def numbers (self):
+        return filter(lambda x: type(x) is int, list)
+    def string (self):
+        return filter(lambda x: type(x) is str, list)
+    def third (self):
+        return filter(lambda x: type(x) is not int and not str, list)
+
+list1 = ListWorker [1,'два',3,4,5,6,7,8,9,'ноль']
+print(list1.numbers)
+
+#4 - не получилось доделать(
+with open ("C:/1.txt") as f:
+    lines = f.readlines()
+print(lines)
+
+import glob
+
+textfiles = r"C:\1.txt"
+glob.glob(textfiles)
+print(glob.glob(textfiles))
+
